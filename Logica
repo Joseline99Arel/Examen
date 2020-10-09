@@ -1,0 +1,76 @@
+package Unidad1;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Logica 
+{
+    Scanner Leer = new Scanner (System.in);
+    List<Integer> Datos = new ArrayList<>();
+    
+    int Posicion, Valor;
+    int Contador, Result;
+    
+    public void Ingresar()
+    {
+        System.out.println("Por favor ingresa 10 numero");
+        for(int i=0;i<10;i++)
+        {
+            System.out.println("Ingresa el Dato "+(i+1));
+            Valor=Leer.nextInt();
+            Datos.add(Valor);
+        }
+        
+    }
+    
+    public void Sumar()
+    {
+        Posicion=0;
+        Result=0;
+        System.out.println("");
+        System.out.println("Esta es tu Lista");
+        System.out.println(Datos);
+        for(int i=0;i<3;i++)
+        {
+            System.out.println("Ingresa la posicion que quieras sumar");
+            Posicion=Leer.nextInt();
+            Result=Result+Datos.get(Posicion-1);
+        }
+        System.out.println("");
+        System.out.println("El Resultado de tu Suma es: "+Result);
+        
+    }
+    
+    public void Restar()
+    {
+        Posicion=0;
+        Result=0;
+        System.out.println("");
+        System.out.println("Esta es tu Lista");
+        System.out.println(Datos);
+        for(int i=0;i<3;i++)
+        {
+            System.out.println("Ingresa la posicion que quieras restar");
+            Posicion=Leer.nextInt();
+            Result=Result-Datos.get(Posicion);
+        }
+        System.out.println("");
+        System.out.println("El Resultado de tu Resta es: "+Result);
+    }
+    
+    public void Multiplicar()
+    {
+        Posicion=0;
+        Result=0;
+        System.out.println("");
+        System.out.println("Esta es tu Lista");
+        System.out.println(Datos);
+        for(int i=0;i<3;i++)
+        {
+            System.out.println("Ingresa la posicion que quieras Multiplicar");
+            Posicion=Leer.nextInt();
+            Result=Result*Datos.get(Posicion-1);
+        }
+        System.out.println("El Resultado de tu Resta es: "+Result);
+    }
+}
