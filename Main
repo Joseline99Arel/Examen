@@ -1,0 +1,50 @@
+package Unidad1;
+import java.util.Scanner;
+public class Main 
+{
+    public static void main (String[] args)
+    {
+        Scanner Leer = new Scanner (System.in);
+        
+        Logica obj=new Logica();
+        obj.Ingresar();
+        
+        int x=1, Opc=0;
+        
+        while(x==1)
+        {
+            System.out.println("");
+            System.out.println("--------------------- Menu ---------------------");
+            System.out.println("Por favor elige una de las siguientes operaciones");
+            System.out.println("1.- Suma");
+            System.out.println("2.- Resta");
+            System.out.println("3.- Multiplicacion");
+            System.out.println("4.- Salir");
+            Opc=Leer.nextInt();
+            
+            if(Opc>0 && Opc<5)
+            {
+                switch(Opc)
+                {
+                    case 1: obj.Sumar();
+                        break;
+                    case 2: obj.Restar();
+                        break;
+                    case 3: obj.Multiplicar();
+                        break;
+                    case 4: System.exit(0);
+                        break;
+                }
+                System.out.println("");
+                System.out.println("Si deceas repertir el proceso teclea 1");
+                System.out.println("Si deceas salir teclea 2");
+                x=Leer.nextInt();
+            }
+            else
+            {
+                System.out.println("Lo sentimos el numero ingresado es incorrecto");
+                System.out.println("Por favor elija una opcion valida");
+            }
+        }
+    }
+}
